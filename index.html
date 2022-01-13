@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <title>대한투어</title>
+    <script src="./script/jquery-1.12.3.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        //     // (B).insertBefore (A) : a의 앞에 b를 배치한다.
+        //     // (A).insertAfter (B) :b의 뒤에 a를 배치한다.
+
+        //     //1. 1번슬라이드의 앞쪽에 3번 슬라이드를 배치
+        //     $('.slide > ul > li:last-child').insertBefore('.slide > ul > li:first-child');
+
+        //     //2. 3번슬라이드 왼쪽으로 1200픽셀 만큼이 이동하여 1번이 화면 중앙에 보이도록 한다.
+        //     $('.slide > ul').css('margin-left','-1200px');
+
+        //     //3. 움직이는 함수
+
+        //     //이미 -1200픽셀만큼 움직였기때문에 -2400픽셀만큼 움직여야 2번 이미지를 보여줌 
+        //     function moveSlide(){
+        //         $('.slide > ul').animate({'margin-left':'-2400px'},500,function(){
+        //             $('.slide > ul > li:first-child').insertAfter('.slide > ul > li:last-child')
+        //             // ,function을 다시 적어 콜백 다시 맨 앞에 이미지를 마지막으로 배치
+        //             $('.slide > ul').css('margin-left','-1200px');
+        //             // 2번 이미지가 3번 이미지에 밀린 부분을 다시 -1200px값으로 재배치
+        //         });  
+
+        //     }
+        //     //오른쪽으로 이동하는 슬라이드 
+        //     // function moveSlide(){
+        //     //     $('.slide > ul').animate({'margin-left':'0px'},500,function(){
+        //     //         $('.slide > ul > li:last-child').insertBefore('.slide > ul > li:first-child')
+        //     //         $('.slide > ul').css('margin-left','1200px');
+        //     //     });  
+
+        //     // }
+            
+        //     //4. 3초마다 자동으로 움직이게 한다.
+        //     // let Timer = setInterval(moveSlide,3000);
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+        // 1. 순서변경하기
+        $('.slide > ul > li:last-child').insertBefore('.slide > ul > li:first-child');
+
+        $('.slide > ul').css('margin-top','-300px');
+
+        function moveSlide(){
+            $('.slide >ul').animate({'margin-top':'-600px'},500,function(){
+                $('.slide >ul > li:first-child').insertAfter('.slide > ul > li:last-child')
+                $('.slide > ul').css('margin-top','-300px');
+            });
+        }
+        let Timer = setInterval(moveSlide, 3000);
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="h_inner">상단헤더영역 1200</div>
+        </header>
+
+        <main>
+            <section class="slide">
+                <ul>
+                    <li>
+                        <h3>마카오 가족여행</h3>
+                        <a href="#" title="메인1"><img src="./images/main01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <h3>해돋이 기차여행</h3>
+                        <a href="#" title="메인1"><img src="./images/main02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <h3>사계절 힐링 제주 온수풀</h3>
+                        <a href="#" title="메인1"><img src="./images/main03.jpg" alt=""></a>
+                    </li>
+                </ul>
+
+            </section>
+            <article class="notice">공지사항</article>
+            <article class="gallery">갤러리</article>
+            <article class="icon">바로가기</article>
+        </main>
+
+        <footer>
+            <div class="f_inner">하단푸터영역 1200</div>
+        </footer>
+    </div>
+</body>
+</html>

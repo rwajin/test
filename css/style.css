@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-*{margin:0px; padding:0px};
-ul,li,ol{list-style:none;}
+*{margin:0px; padding:0px;}
+ul, ol, li{list-style:none;}
 a{text-decoration:none; color:#333333;}
 body{
     font-family:"맑은 고딕", 'arial', 'snas-serif';
@@ -17,6 +17,80 @@ header{background-color:cornsilk;}
     background-color:bisque;
     margin:0px auto;
 }
+.h_inner{
+    padding-top:30px;
+    box-sizing: border-box;
+    position:relative;
+}
+
+.h_inner > h1{
+    width:200px; height:40px;
+    background-color: coral;
+    float:left;
+}
+.gnb{
+    width:400px;
+    height:40px;
+    float:right;
+}
+.gnb > ul{
+    /* display:flex;
+    display:grid; */
+}
+.gnb > ul > li{
+    float: left;
+    position:relative;
+    /* display:inline-block; */
+    /* display:inline; */
+
+}
+.gnb > ul > li > a{
+    padding:0px 20px;
+    font-size:16px;
+    line-height:40px;
+    display:block;
+    transition: .5s;
+}
+.gnb > ul > li > a:hover{
+    background-color:#737373;
+    color:#fff;
+}
+.sub{
+    position:absolute;
+    width:100%;
+    z-index:1000;
+    transition: 0.5s;
+    display:none;
+}
+.sub > li{
+    text-align:center;
+}
+.sub > li > a{
+    font-size:14px;
+    display:block;
+    line-height:40px;
+    transition: 0.5s;
+    color:#fff;
+}
+.sub > li > a:hover{
+    background-color:#fff;
+    color:#333;
+}
+/* 메인메뉴에 마우스 오버시 서브메뉴 나오게 */
+.gnb:hover .sub{
+    display:block;
+}
+/* li:hover는 따로따로 펼쳐짐 */
+
+.gnb:hover::after{
+    display:block;
+    content:"";
+    width:1200px; height:230px;
+    position:absolute;
+    top:70px;left:0px;
+    background-color:#737373;
+    z-index:10;
+}
 
 main{
     width:1200px; height:500px;
@@ -27,7 +101,8 @@ main{
 }
 .slide{
     width:100%; height:300px;
-    background-color:#ffff00;;
+    background-color:#ffff00;
+    overflow:hidden;
 }
 .slide > ul{
     /* width:3600px; */

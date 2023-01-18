@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사전 과제</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+    <!-- pc서식 -->
+    <link href="./css/pc.css" rel="stylesheet" type="text/css">
+    <!-- 모바일 -->
+    <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!--제이쿼리-->
+    <script src="./script/jquery-3.6.0.min.js"></script>
+    <!-- js -->
+    <script src="./script/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#" title="상단로고">
+                <img src="./img/logo.jpg" alt="로고">
+            </a>
+        </h1>
+
+        <div class="inner_nav">
+            <div id="toggle">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="#" title="">menu01<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="">menu02<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="">menu03<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="">menu04<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="">menu05<i></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search_box">
+            <fieldset>
+                <legend>검색</legend>
+                <input type="search" id="search" placeholder="검색창">
+                <label for="search" class="fas fa-search"><span>검색버튼</span></label>
+            </fieldset>
+        </div>
+        <div class="language">
+            <i class="fas fa-globe"></i>
+        </div>
+    </header>
+    <main>
+        <section class="slide">
+            <div class="slidecontainer">
+                <ul class="slideWrap">
+                    <li>
+                        <a href="#" title="slideimg">
+                            <img src="./img/slide01.jpg" alt="slideimg01">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="slideimg">
+                            <img src="./img/slide02.jpg" alt="slideimg01">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="slideimg">
+                            <img src="./img/slide03.jpg" alt="slideimg01">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="BtWrap">
+                    <li><a href="#" class="pageBt addBt"></a></li>
+                    <li><a href="#" class="pageBt"></a></li>
+                    <li><a href="#" class="pageBt"></a></li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <section id="tab_con">
+            <nav class="g_lnb">
+                <ul>
+                    <li><a href="#" title="전체보기">전체보기</a></li>
+                    <li><a href="#" title="기획">날씨</a></li>
+                    <li><a href="#" title="설계">옷</a></li>
+                </ul>
+            </nav>
+    
+            <ul class="g_list">
+                <li class="weather"><a href="#" title="날씨">
+                    <img src="./img/g01.jpg" alt="날씨">
+                    <span class="caption">날씨</span></a>
+                </li>
+                <li class="clothes"><a href="#" title="옷">
+                    <img src="./img/g04.jpg" alt="옷">
+                    <span class="caption">옷</span></a>
+                </li>
+                <li class="weather"><a href="#" title="날씨">
+                    <img src="./img/g02.jpg" alt="날씨">
+                    <span class="caption">날씨</span></a>
+                </li>
+                <li class="weather"><a href="#" title="날씨">
+                    <img src="./img/g03.jpg" alt="날씨">
+                    <span class="caption">날씨</span></a>
+                </li>
+                <li class="clothes"><a href="#" title="옷">
+                    <img src="./img/g05.jpg" alt="옷">
+                    <span class="caption">옷</span></a>
+                </li>
+                <li class="clothes"><a href="#" title="옷">
+                    <img src="./img/g06.jpg" alt="옷">
+                    <span class="caption">날씨</span></a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div>footer</div>
+    </footer>
+</body>
+</html>
